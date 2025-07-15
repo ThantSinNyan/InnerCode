@@ -1,6 +1,6 @@
 <template>
   <div class="hs_indx_title_main_wrapper">
-    <div class="hs_title_img_overlay"></div>
+    <div class="hs_title_img_overlay" />
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 full_width">
@@ -24,7 +24,10 @@
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <div class="hs_about_left_img_wrapper">
-            <img src="images/content/about_img_1.png" alt="about_img" />
+            <img
+              src="images/content/about_img_1.png"
+              alt="about_img"
+            >
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -42,7 +45,10 @@
                        
             <div class="hs_effect_btn hs_about_btn">
               <ul>
-                <li><a href="#" class="hs_btn_hover">Read more</a></li>
+                <li><a
+                  href="#"
+                  class="hs_btn_hover"
+                >Read more</a></li>
               </ul>
             </div>
           </div>

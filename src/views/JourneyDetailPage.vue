@@ -1,6 +1,6 @@
 <template>
   <div class="hs_indx_title_main_wrapper">
-    <div class="hs_title_img_overlay"></div>
+    <div class="hs_title_img_overlay" />
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 full_width">
@@ -28,7 +28,10 @@
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="hs_blog_box1_main_wrapper">
                   <div class="hs_blog_box1_img_wrapper">
-                    <img src="images/content/blog/family_bc1.png" alt="blog_img">
+                    <img
+                      src="images/content/blog/family_bc1.png"
+                      alt="blog_img"
+                    >
                     <ul>
                       <li>29 Jul, 2020</li>
                     </ul>
@@ -46,7 +49,7 @@
                       <h2>Family and Relationships through Inner Child Connection and emotional release</h2>
                       <h4><span>&nbsp;</span></h4>
                       <p>This guided meditation gently leads you into a safe, nurturing space where you can reconnect with your inner child—the part of you that still carries old emotions, unmet needs, and memories from past relationships. By acknowledging and embracing this part of yourself, you begin to heal the emotional wounds that often affect your connections with family and loved ones.</p>
-                      <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
+                      <h5><a href="#">Read More <i class="fa fa-long-arrow-right" /></a></h5>
                     </div>
                   </div>
                 </div>
@@ -54,7 +57,7 @@
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="hs_blog_box1_main_wrapper hs_blog_box2_main_wrapper">
                   <div class="hs_blog_box1_img_wrapper">
-                    <iframe src="https://www.youtube.com/embed/uTN29kj7e-w?si=6SRsb7FLkVTDnvNR"></iframe>
+                    <iframe src="https://www.youtube.com/embed/uTN29kj7e-w?si=6SRsb7FLkVTDnvNR" />
                     <ul>
                       <li>29 Jul, 2020</li>
                     </ul>
@@ -86,7 +89,7 @@
                         Avoid tight or restrictive clothes; choose something soft and breathable.
 
                         Avoid Heavy Meals</p>
-                      <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
+                      <h5><a href="#">Read More <i class="fa fa-long-arrow-right" /></a></h5>
                     </div>
                   </div>
                 </div>
@@ -95,12 +98,12 @@
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 visible-lg visible-md">
                 <div class="pager_wrapper">
                   <ul class="pagination">
-                    <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                    <li><a href="#"><i class="fa fa-angle-left" /></a></li>
                     <li class="btc_shop_pagi"><a href="#">01</a></li>
                     <li class="btc_shop_pagi"><a href="#">02</a></li>
                     <li class="btc_third_pegi btc_shop_pagi"><a href="#">03</a></li>
                     <li class="hidden-xs btc_shop_pagi"><a href="#">04</a></li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="#"><i class="fa fa-angle-right" /></a></li>
                   </ul>
                 </div>
               </div>
@@ -112,8 +115,11 @@
             <div class="row">
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="hs_blog_right_search_wrapper">
-                  <input type="text" placeholder="Search">
-                  <button type="submit"><i class="fa fa-search"></i></button>
+                  <input
+                    type="text"
+                    placeholder="Search"
+                  >
+                  <button type="submit"><i class="fa fa-search" /></button>
                 </div>
               </div>
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -142,12 +148,12 @@
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 visible-sm visible-xs">
                 <div class="pager_wrapper">
                   <ul class="pagination">
-                    <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                    <li><a href="#"><i class="fa fa-angle-left" /></a></li>
                     <li class="btc_shop_pagi"><a href="#">01</a></li>
                     <li class="btc_shop_pagi"><a href="#">02</a></li>
                     <li class="btc_third_pegi btc_shop_pagi"><a href="#">03</a></li>
                     <li class="hidden-xs btc_shop_pagi"><a href="#">04</a></li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="#"><i class="fa fa-angle-right" /></a></li>
                   </ul>
                 </div>
               </div>

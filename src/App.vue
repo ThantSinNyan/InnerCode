@@ -1,5 +1,5 @@
 <template>
-  <HelloWorld/>
+  <HelloWorld />
 </template>
 <script>
 import HelloWorld from './views/MainView.vue';

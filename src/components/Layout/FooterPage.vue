@@ -7,15 +7,19 @@
         <div class="row">
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="hs_footer_logo_wrapper">
-              <img src="images/content/footer_logo.png" alt="footer_logo" class="img-responsive" />
+              <img
+                src="images/content/footer_logo.png"
+                alt="footer_logo"
+                class="img-responsive"
+              >
               <h3>+1800-123-123</h3>
               <p>We are a spiritual healing platform that blends astrology, mindfulness, and AI to guide individuals on a personalized journey of self-discovery and emotional growth.</p>
-              <h4><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h4>
+              <h4><a href="#">Read More <i class="fa fa-long-arrow-right" /></a></h4>
               <ul>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook" /></a></li>
+                <li><a href="#"><i class="fa fa-twitter" /></a></li>
+                <li><a href="#"><i class="fa fa-youtube-play" /></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" /></a></li>
               </ul>
             </div>
           </div>
@@ -23,21 +27,42 @@
             <div class="hs_footer_list_wrapper">
               <h2>Quick Links </h2>
               <ul class="hs_footer_list">
-                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Home</a>
+                <li><a href="#"><i
+                  class="fa fa-caret-right"
+                  aria-hidden="true"
+                /> Home</a>
                 </li>
-                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> About </a>
+                <li><a href="#"><i
+                  class="fa fa-caret-right"
+                  aria-hidden="true"
+                /> About </a>
                 </li>
-                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> How It Works </a>
+                <li><a href="#"><i
+                  class="fa fa-caret-right"
+                  aria-hidden="true"
+                /> How It Works </a>
                 </li>
-                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Explore Signs</a>
+                <li><a href="#"><i
+                  class="fa fa-caret-right"
+                  aria-hidden="true"
+                /> Explore Signs</a>
                 </li>
-                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Start Your Journey</a> </li>
-                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us </a> </li>
-                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us </a> </li>
+                <li><a href="#"><i
+                  class="fa fa-caret-right"
+                  aria-hidden="true"
+                />Start Your Journey</a> </li>
+                <li><a href="#"><i
+                  class="fa fa-caret-right"
+                  aria-hidden="true"
+                />About Us </a> </li>
+                <li><a href="#"><i
+                  class="fa fa-caret-right"
+                  aria-hidden="true"
+                />Contact Us </a> </li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+          <!-- <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="hs_footer_list_wrapper">
               <h2>Usefull <span>Links</span></h2>
               <ul class="hs_footer_list">
@@ -54,8 +79,8 @@
                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us </a> </li>
               </ul>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+          </div> -->
+          <!-- <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="hs_download_wrapper">
               <h2>Download<span>App</span></h2>
               <p>Download Our Mobile App</p>
@@ -68,7 +93,7 @@
                 </a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -76,13 +101,14 @@
   <!-- hs footer wrapper End -->
   <!-- hs bottom footer wrapper Start -->
   <div class="hs_bottom_footer_main_wrapper">
-    <a href="javascript:" id="return-to-top"><i class="fa fa-angle-up"></i></a>
+    <a
+      id="return-to-top"
+      href="javascript:"
+    ><i class="fa fa-angle-up" /></a>
     <div class="container">
       <div class="row">
         <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-          <div class="footer_bottom_cont_wrapper">
-          
-          </div>
+          <div class="footer_bottom_cont_wrapper" />
         </div>
         <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
           <div class="footer_bottom_list_wrapper">

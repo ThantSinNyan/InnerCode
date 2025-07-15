@@ -1,12 +1,12 @@
 <template>
-  <HeadImport></HeadImport>
+  <HeadImport />
   <body>
     <div class="main_header_wrapper">
-      <NavLayoutContact></NavLayoutContact>
-      <NavLayoutMenu></NavLayoutMenu>
+      <NavLayoutContact />
+      <NavLayoutMenu />
     </div>
     <router-view />
-    <Footer></Footer>
+    <Footer />
   </body>
 </template>
 <script setup>

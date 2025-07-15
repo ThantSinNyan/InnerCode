@@ -1,6 +1,6 @@
 <template>
   <div class="hs_indx_title_main_wrapper">
-    <div class="hs_title_img_overlay"></div>
+    <div class="hs_title_img_overlay" />
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 full_width">
@@ -25,7 +25,7 @@
         <div class="hs_about_heading_main_wrapper">
           <div class="hs_about_heading_wrapper">
             <h2> <span>Chiron And House Placement</span></h2>
-            <h4><span></span></h4>
+            <h4><span /></h4>
             <p>Discover where your deepest emotional wounds (Chiron) appear in your life through the lens of astrology.<br>
               Your House placement shows which area of life these wounds affect most—offering insight into your healing journey.</p>
           </div>
@@ -34,126 +34,309 @@
       <div class="hs_sign_center_wrapper visible-xs visible-sm">
         <div class="hs_cycle_main_wrapper">
           <div class="hs_cycle_img">
-            <img src="images/content/cycle_logo_5.png" alt="circle_img">
-            <span class="pulse"></span>
+            <img
+              src="images/content/cycle_logo_5.png"
+              alt="circle_img"
+            >
+            <span class="pulse" />
             <div class="hs_tab_shap1">
               <a href="#">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_1"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-taurus-astrological-sign-symbol"></i></p>
+                <p><i class="flaticon-taurus-astrological-sign-symbol" /></p>
               </a>
             </div>
             <div class="hs_tab_shap2">
               <a href="#">
-                <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_2"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-aries-sign"></i></p>
+                <p><i class="flaticon-aries-sign" /></p>
               </a>
             </div>
             <div class="hs_tab_shap3">
               <a href="#">
-                <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_3"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-libra"></i></p>
+                <p><i class="flaticon-libra" /></p>
               </a>
             </div>
             <div class="hs_tab_shap4">
               <a href="#">
-                <svg version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_4"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-scorpio"></i></p>
+                <p><i class="flaticon-scorpio" /></p>
               </a>
             </div>
             <div class="hs_tab_shap5">
               <a href="#">
-                <svg version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_5"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-leo"></i></p>
+                <p><i class="flaticon-leo" /></p>
               </a>
             </div>
             <div class="hs_tab_shap6">
               <a href="#">
-                <svg version="1.1" id="Layer_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_6"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-capricorn"></i></p>
+                <p><i class="flaticon-capricorn" /></p>
               </a>
             </div>
             <div class="hs_tab_shap7">
               <a href="#">
-                <svg version="1.1" id="Layer_7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_7"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-aquarius-zodiac-sign-symbol"></i></p>
+                <p><i class="flaticon-aquarius-zodiac-sign-symbol" /></p>
               </a>
             </div>
             <div class="hs_tab_shap8">
               <a href="#">
-                <svg version="1.1" id="Layer_8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_8"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-gemini-zodiac-sign-symbol"></i></p>
+                <p><i class="flaticon-gemini-zodiac-sign-symbol" /></p>
               </a>
             </div>
             <div class="hs_tab_shap9">
               <a href="#">
-                <svg version="1.1" id="Layer_9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_9"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-virgo-astrological-symbol-sign"></i></p>
+                <p><i class="flaticon-virgo-astrological-symbol-sign" /></p>
               </a>
             </div>
             <div class="hs_tab_shap10">
               <a href="#">
-                <svg version="1.1" id="Layer_10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_10"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-leo"></i></p>
+                <p><i class="flaticon-leo" /></p>
               </a>
             </div>
             <div class="hs_tab_shap11">
               <a href="#">
-                <svg version="1.1" id="Layer_11" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_11"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-cancer"></i></p>
+                <p><i class="flaticon-cancer" /></p>
               </a>
             </div>
             <div class="hs_tab_shap12">
               <a href="#">
-                <svg version="1.1" id="Layer_12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_12"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-gemini-zodiac-sign-symbol"></i></p>
+                <p><i class="flaticon-gemini-zodiac-sign-symbol" /></p>
               </a>
             </div>
           </div>
@@ -165,85 +348,103 @@
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_border_wrapper1">
               <div class="hs_slider_tabs_icon_wrapper">
-                <i class="flaticon-aries-sign"></i>
+                <i class="flaticon-aries-sign" />
               </div>
               <div class="hs_slider_tabs_icon_cont_wrapper">
                 <ul>
-                  <li><a href="#" class="hs_tabs_btn">Aries</a></li>
+                  <li><a
+                    href="#"
+                    class="hs_tabs_btn"
+                  >Aries</a></li>
                   <li>31 March - 12 October</li>
                 </ul>
               </div>
-              <span></span>
+              <span />
             </div>
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_left_tabs_border_wrapper2">
               <div class="hs_slider_tabs_icon_wrapper">
-                <i class="flaticon-taurus-astrological-sign-symbol"></i>
+                <i class="flaticon-taurus-astrological-sign-symbol" />
               </div>
               <div class="hs_slider_tabs_icon_cont_wrapper">
                 <ul>
-                  <li><a href="#" class="hs_tabs_btn">Taurus</a></li>
+                  <li><a
+                    href="#"
+                    class="hs_tabs_btn"
+                  >Taurus</a></li>
                   <li>31 March - 12 October</li>
                 </ul>
               </div>
-              <span></span>
+              <span />
             </div>
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_left_tabs_border_wrapper3">
               <div class="hs_slider_tabs_icon_wrapper">
-                <i class="flaticon-gemini-zodiac-sign-symbol"></i>
+                <i class="flaticon-gemini-zodiac-sign-symbol" />
               </div>
               <div class="hs_slider_tabs_icon_cont_wrapper">
                 <ul>
-                  <li><a href="#" class="hs_tabs_btn">Gemini</a></li>
+                  <li><a
+                    href="#"
+                    class="hs_tabs_btn"
+                  >Gemini</a></li>
                   <li>31 March - 12 October</li>
                 </ul>
               </div>
-              <span></span>
+              <span />
             </div>
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_left_tabs_border_wrapper4">
               <div class="hs_slider_tabs_icon_wrapper">
-                <i class="flaticon-cancer"></i>
+                <i class="flaticon-cancer" />
               </div>
               <div class="hs_slider_tabs_icon_cont_wrapper">
                 <ul>
-                  <li><a href="#" class="hs_tabs_btn">Cancer</a></li>
+                  <li><a
+                    href="#"
+                    class="hs_tabs_btn"
+                  >Cancer</a></li>
                   <li>31 March - 12 October</li>
                 </ul>
               </div>
-              <span></span>
+              <span />
             </div>
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_left_tabs_border_wrapper5">
               <div class="hs_slider_tabs_icon_wrapper">
-                <i class="flaticon-leo"></i>
+                <i class="flaticon-leo" />
               </div>
               <div class="hs_slider_tabs_icon_cont_wrapper">
                 <ul>
-                  <li><a href="#" class="hs_tabs_btn">Leo</a></li>
+                  <li><a
+                    href="#"
+                    class="hs_tabs_btn"
+                  >Leo</a></li>
                   <li>31 March - 12 October</li>
                 </ul>
               </div>
-              <span></span>
+              <span />
             </div>
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_left_tabs_border_wrapper6">
               <div class="hs_slider_tabs_icon_wrapper">
-                <i class="flaticon-virgo-astrological-symbol-sign"></i>
+                <i class="flaticon-virgo-astrological-symbol-sign" />
               </div>
               <div class="hs_slider_tabs_icon_cont_wrapper">
                 <ul>
-                  <li><a href="#" class="hs_tabs_btn">Virgo</a></li>
+                  <li><a
+                    href="#"
+                    class="hs_tabs_btn"
+                  >Virgo</a></li>
                   <li>31 March - 12 October</li>
                 </ul>
               </div>
-              <span></span>
+              <span />
             </div>
           </div>
         </div>
@@ -252,14 +453,17 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_sign_left_tabs_wrapper hs_sign_right_tabs_border_wrapper1">
-              <span></span>
+              <span />
 
               <div class="hs_slider_tabs_icon_wrapper">
-                <i class="flaticon-libra"></i>
+                <i class="flaticon-libra" />
               </div>
               <div class="hs_slider_tabs_icon_cont_wrapper">
                 <ul>
-                  <li><a href="#" class="hs_tabs_btn">Libra</a></li>
+                  <li><a
+                    href="#"
+                    class="hs_tabs_btn"
+                  >Libra</a></li>
                   <li>31 March - 12 October</li>
                 </ul>
               </div>
@@ -267,13 +471,16 @@
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper2">
-              <span></span>
+              <span />
               <div class="hs_slider_tabs_icon_wrapper">
-                <i class="flaticon-scorpio"></i>
+                <i class="flaticon-scorpio" />
               </div>
               <div class="hs_slider_tabs_icon_cont_wrapper">
                 <ul>
-                  <li><a href="#" class="hs_tabs_btn">Scorpio</a></li>
+                  <li><a
+                    href="#"
+                    class="hs_tabs_btn"
+                  >Scorpio</a></li>
                   <li>31 March - 12 October</li>
                 </ul>
               </div>
@@ -281,13 +488,16 @@
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper3">
-              <span></span>
+              <span />
               <div class="hs_slider_tabs_icon_wrapper">
-                <i class="flaticon-sagittarius-arrow-sign"></i>
+                <i class="flaticon-sagittarius-arrow-sign" />
               </div>
               <div class="hs_slider_tabs_icon_cont_wrapper">
                 <ul>
-                  <li><a href="#" class="hs_tabs_btn">Sagittarius</a></li>
+                  <li><a
+                    href="#"
+                    class="hs_tabs_btn"
+                  >Sagittarius</a></li>
                   <li>31 March - 12 October</li>
                 </ul>
               </div>
@@ -295,13 +505,16 @@
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper4">
-              <span></span>
+              <span />
               <div class="hs_slider_tabs_icon_wrapper">
-                <i class="flaticon-capricorn"></i>
+                <i class="flaticon-capricorn" />
               </div>
               <div class="hs_slider_tabs_icon_cont_wrapper">
                 <ul>
-                  <li><a href="#" class="hs_tabs_btn">
+                  <li><a
+                    href="#"
+                    class="hs_tabs_btn"
+                  >
                     Capricorn
                   </a></li>
                   <li>31 March - 12 October</li>
@@ -311,13 +524,16 @@
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper5">
-              <span></span>
+              <span />
               <div class="hs_slider_tabs_icon_wrapper">
-                <i class="flaticon-aquarius-zodiac-sign-symbol"></i>
+                <i class="flaticon-aquarius-zodiac-sign-symbol" />
               </div>
               <div class="hs_slider_tabs_icon_cont_wrapper">
                 <ul>
-                  <li><a href="#" class="hs_tabs_btn">
+                  <li><a
+                    href="#"
+                    class="hs_tabs_btn"
+                  >
                     Aquarius
                   </a></li>
                   <li>31 March - 12 October</li>
@@ -327,13 +543,16 @@
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper6">
-              <span></span>
+              <span />
               <div class="hs_slider_tabs_icon_wrapper sagit-icon">   	
-                <i class="flaticon-pisces-astrological-sign"></i>
+                <i class="flaticon-pisces-astrological-sign" />
               </div>
               <div class="hs_slider_tabs_icon_cont_wrapper">
                 <ul>
-                  <li><a href="#" class="hs_tabs_btn">Pisces
+                  <li><a
+                    href="#"
+                    class="hs_tabs_btn"
+                  >Pisces
                   </a></li>
                   <li>31 March - 12 October</li>
                 </ul>
@@ -345,126 +564,309 @@
       <div class="hs_sign_center_wrapper hidden-sm hidden-xs">
         <div class="hs_cycle_main_wrapper">
           <div class="hs_cycle_img">
-            <img src="images/content/cycle_logo_5.png" alt="circle_img">
-            <span class="pulse"></span>
+            <img
+              src="images/content/cycle_logo_5.png"
+              alt="circle_img"
+            >
+            <span class="pulse" />
             <div class="hs_tab_shap1">
               <a href="#">
-                <svg version="1.1" id="Layer_13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_13"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-taurus-astrological-sign-symbol"></i></p>
+                <p><i class="flaticon-taurus-astrological-sign-symbol" /></p>
               </a>
             </div>
             <div class="hs_tab_shap2">
               <a href="#">
-                <svg version="1.1" id="Layer_14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_14"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-aries-sign"></i></p>
+                <p><i class="flaticon-aries-sign" /></p>
               </a>
             </div>
             <div class="hs_tab_shap3">
               <a href="#">
-                <svg version="1.1" id="Layer_15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_15"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-libra"></i></p>
+                <p><i class="flaticon-libra" /></p>
               </a>
             </div>
             <div class="hs_tab_shap4">
               <a href="#">
-                <svg version="1.1" id="Layer_16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_16"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-scorpio"></i></p>
+                <p><i class="flaticon-scorpio" /></p>
               </a>
             </div>
             <div class="hs_tab_shap5">
               <a href="#">
-                <svg version="1.1" id="Layer_17" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_17"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p>  <i class="flaticon-sagittarius-arrow-sign"></i> </p>
+                <p>  <i class="flaticon-sagittarius-arrow-sign" /> </p>
               </a>
             </div>
             <div class="hs_tab_shap6">
               <a href="#">
-                <svg version="1.1" id="Layer_18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_18"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-capricorn"></i></p>
+                <p><i class="flaticon-capricorn" /></p>
               </a>
             </div>
             <div class="hs_tab_shap7">
               <a href="#">
-                <svg version="1.1" id="Layer_19" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_19"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-aquarius-zodiac-sign-symbol"></i></p>
+                <p><i class="flaticon-aquarius-zodiac-sign-symbol" /></p>
               </a>
             </div>
             <div class="hs_tab_shap8">
               <a href="#">
-                <svg version="1.1" id="Layer_20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_20"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p> <i class="flaticon-pisces-astrological-sign"></i> </p>
+                <p> <i class="flaticon-pisces-astrological-sign" /> </p>
               </a>
             </div>
             <div class="hs_tab_shap9">
               <a href="#">
-                <svg version="1.1" id="Layer_21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_21"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-virgo-astrological-symbol-sign"></i></p>
+                <p><i class="flaticon-virgo-astrological-symbol-sign" /></p>
               </a>
             </div>
             <div class="hs_tab_shap10">
               <a href="#">
-                <svg version="1.1" id="Layer_22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_22"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-leo"></i></p>
+                <p><i class="flaticon-leo" /></p>
               </a>
             </div>
             <div class="hs_tab_shap11">
               <a href="#">
-                <svg version="1.1" id="Layer_23" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_23"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-cancer"></i></p>
+                <p><i class="flaticon-cancer" /></p>
               </a>
             </div>
             <div class="hs_tab_shap12">
               <a href="#">
-                <svg version="1.1" id="Layer_24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
-							c0,0-30.278-18.234-68.054-17.929L0,52.763z"/>
+                <svg
+                  id="Layer_24"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="68.811px"
+                  height="64.729px"
+                  viewBox="0 0 68.811 64.729"
+                  enable-background="new 0 0 68.811 64.729"
+                  xml:space="preserve"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z"
+                  />
                 </svg>
-                <p><i class="flaticon-gemini-zodiac-sign-symbol"></i></p>
+                <p><i class="flaticon-gemini-zodiac-sign-symbol" /></p>
               </a>
             </div>
           </div>
@@ -475,85 +877,103 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_sign_left_tabs_wrapper hs_sign_right_tabs_border_wrapper1">
-              <span></span>
+              <span />
               <div class="hs_slider_tabs_icon_cont_wrapper">
                 <ul>
-                  <li><a href="#" class="hs_tabs_btn">Libra</a></li>
+                  <li><a
+                    href="#"
+                    class="hs_tabs_btn"
+                  >Libra</a></li>
                   <li>31 March - 12 October</li>
                 </ul>
               </div>
               <div class="hs_slider_tabs_icon_wrapper">
-                <i class="flaticon-libra"></i>
+                <i class="flaticon-libra" />
               </div>
             </div>
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper2">
-              <span></span>
+              <span />
               <div class="hs_slider_tabs_icon_cont_wrapper">
                 <ul>
-                  <li><a href="#" class="hs_tabs_btn">Scorpio</a></li>
+                  <li><a
+                    href="#"
+                    class="hs_tabs_btn"
+                  >Scorpio</a></li>
                   <li>31 March - 12 October</li>
                 </ul>
               </div>
               <div class="hs_slider_tabs_icon_wrapper">
-                <i class="flaticon-scorpio"></i>
+                <i class="flaticon-scorpio" />
               </div>
             </div>
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper3">
-              <span></span>
+              <span />
               <div class="hs_slider_tabs_icon_cont_wrapper">
                 <ul>
-                  <li><a href="#" class="hs_tabs_btn">Sagittarius</a></li>
+                  <li><a
+                    href="#"
+                    class="hs_tabs_btn"
+                  >Sagittarius</a></li>
                   <li>31 March - 12 October</li>
                 </ul>
               </div>
               <div class="hs_slider_tabs_icon_wrapper">
-                <i class="flaticon-sagittarius-arrow-sign"></i>
+                <i class="flaticon-sagittarius-arrow-sign" />
               </div>
             </div>
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper4">
-              <span></span>
+              <span />
               <div class="hs_slider_tabs_icon_cont_wrapper">
                 <ul>
-                  <li><a href="#" class="hs_tabs_btn">Capricorn</a></li>
+                  <li><a
+                    href="#"
+                    class="hs_tabs_btn"
+                  >Capricorn</a></li>
                   <li>31 March - 12 October</li>
                 </ul>
               </div>
               <div class="hs_slider_tabs_icon_wrapper">
-                <i class="flaticon-capricorn"></i>
+                <i class="flaticon-capricorn" />
               </div>
             </div>
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper5">
-              <span></span>
+              <span />
               <div class="hs_slider_tabs_icon_cont_wrapper">
                 <ul>
-                  <li><a href="#" class="hs_tabs_btn">Aquarius</a></li>
+                  <li><a
+                    href="#"
+                    class="hs_tabs_btn"
+                  >Aquarius</a></li>
                   <li>31 March - 12 October</li>
                 </ul>
               </div>
               <div class="hs_slider_tabs_icon_wrapper">
-                <i class="flaticon-aquarius-zodiac-sign-symbol"></i>
+                <i class="flaticon-aquarius-zodiac-sign-symbol" />
               </div>
             </div>
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper6">
-              <span></span>
+              <span />
               <div class="hs_slider_tabs_icon_cont_wrapper">
                 <ul>
-                  <li><a href="#" class="hs_tabs_btn">Pisces</a></li>
+                  <li><a
+                    href="#"
+                    class="hs_tabs_btn"
+                  >Pisces</a></li>
                   <li>31 March - 12 October</li>
                 </ul>
               </div>
               <div class="hs_slider_tabs_icon_wrapper sagit-icon">
-                <i class="flaticon-pisces-astrological-sign"></i>
+                <i class="flaticon-pisces-astrological-sign" />
               </div>
             </div>
           </div>
@@ -573,11 +993,14 @@
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_border_wrapper1">
                   <div class="hs_slider_tabs_icon_wrapper">
-                    <i class="flaticon-aries-sign"></i>
+                    <i class="flaticon-aries-sign" />
                   </div>
                   <div class="hs_slider_tabs_icon_cont_wrapper hs_ar_tabs_heading_wrapper">
                     <ul>
-                      <li><a href="#" class="hs_tabs_btn">Chiron in Scorpio in the 4th House</a></li>
+                      <li><a
+                        href="#"
+                        class="hs_tabs_btn"
+                      >Chiron in Scorpio in the 4th House</a></li>
                       <li>31 March - 12 October</li>
                     </ul>
                   </div>
@@ -589,7 +1012,10 @@
                   <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                       <div class="hs_ar_first_sec_img_wrapper">
-                        <img src="images/content/kundali/aries_img_2.png" alt="arlies_img" />
+                        <img
+                          src="images/content/kundali/aries_img_2.png"
+                          alt="arlies_img"
+                        >
                       </div>
                     </div>
                     <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
@@ -605,7 +1031,7 @@
                         <ul>
                           <li>
                             <div class="hs_pr_icon_wrapper">
-                              <i class="fa fa-circle"></i>
+                              <i class="fa fa-circle" />
                             </div>
                             <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
                               <p><span>Core Wounds & Emotional Themes</span> : Emotional Wound, Childhood Trauma, Abandonment, Betrayal, Family Pain</p>
@@ -613,7 +1039,7 @@
                           </li>
                           <li>
                             <div class="hs_pr_icon_wrapper">
-                              <i class="fa fa-circle"></i>
+                              <i class="fa fa-circle" />
                             </div>
                             <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
                               <p><span>Patterns & Struggles</span> : Trust Issues, Emotional Control, Disconnection from Family, Fear of Vulnerability</p>
@@ -621,7 +1047,7 @@
                           </li>
                           <li>
                             <div class="hs_pr_icon_wrapper">
-                              <i class="fa fa-circle"></i>
+                              <i class="fa fa-circle" />
                             </div>
                             <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
                               <p><span>Healing & Transformation</span> : Emotional Resilience, Inner Foundation, Emotional Security, Home & Roots Healing</p>
@@ -629,7 +1055,7 @@
                           </li>
                           <li>
                             <div class="hs_pr_icon_wrapper">
-                              <i class="fa fa-circle"></i>
+                              <i class="fa fa-circle" />
                             </div>
                             <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
                               <p><span>Spiritual Wisdom & Gifts </span>: Emotional Depth, Healing Others, Empathy, Spiritual Insight, Supportive Presence</p>
@@ -644,7 +1070,7 @@
                         <ul>
                           <li>
                             <div class="hs_pr_icon_wrapper">
-                              <i class="fa fa-circle"></i>
+                              <i class="fa fa-circle" />
                             </div>
                             <div class="hs_pr_icon_cont_wrapper">
                               Deep emotional pain linked to family, home, and early childhood.
@@ -652,7 +1078,7 @@
                           </li>
                           <li>
                             <div class="hs_pr_icon_wrapper">
-                              <i class="fa fa-circle"></i>
+                              <i class="fa fa-circle" />
                             </div>
                             <div class="hs_pr_icon_cont_wrapper">
                               Fear of emotional abandonment or betrayal by those closest to you.
@@ -660,7 +1086,7 @@
                           </li>
                           <li>
                             <div class="hs_pr_icon_wrapper">
-                              <i class="fa fa-circle"></i>
+                              <i class="fa fa-circle" />
                             </div>
                             <div class="hs_pr_icon_cont_wrapper">
                               Difficulty feeling safe, supported, or emotionally secure.
@@ -668,7 +1094,7 @@
                           </li>
                           <li>
                             <div class="hs_pr_icon_wrapper">
-                              <i class="fa fa-circle"></i>
+                              <i class="fa fa-circle" />
                             </div>
                             <div class="hs_pr_icon_cont_wrapper">
                               Tendency to hide emotions or resist vulnerability at home.
@@ -681,7 +1107,7 @@
                         <ul>
                           <li>
                             <div class="hs_pr_icon_wrapper">
-                              <i class="fa fa-circle"></i>
+                              <i class="fa fa-circle" />
                             </div>
                             <div class="hs_pr_icon_cont_wrapper">
                               Struggles to trust others emotionally, especially within close relationships.
@@ -689,7 +1115,7 @@
                           </li>
                           <li>
                             <div class="hs_pr_icon_wrapper">
-                              <i class="fa fa-circle"></i>
+                              <i class="fa fa-circle" />
                             </div>
                             <div class="hs_pr_icon_cont_wrapper">
                               A pattern of emotional withdrawal or intense emotional control.
@@ -697,7 +1123,7 @@
                           </li>
                           <li>
                             <div class="hs_pr_icon_wrapper">
-                              <i class="fa fa-circle"></i>
+                              <i class="fa fa-circle" />
                             </div>
                             <div class="hs_pr_icon_cont_wrapper">
                               Feeling like an outsider in your own family or uncomfortable in your roots.
@@ -705,7 +1131,7 @@
                           </li>
                           <li>
                             <div class="hs_pr_icon_wrapper">
-                              <i class="fa fa-circle"></i>
+                              <i class="fa fa-circle" />
                             </div>
                             <div class="hs_pr_icon_cont_wrapper">
                               Attracting intense, emotional family dynamics or power struggles.
@@ -719,7 +1145,7 @@
                         <ul>
                           <li>
                             <div class="hs_pr_icon_wrapper">
-                              <i class="fa fa-circle"></i>
+                              <i class="fa fa-circle" />
                             </div>
                             <div class="hs_pr_icon_cont_wrapper">
                               You’ll develop a strong inner emotional foundation and resilience.
@@ -727,7 +1153,7 @@
                           </li>
                           <li>
                             <div class="hs_pr_icon_wrapper">
-                              <i class="fa fa-circle"></i>
+                              <i class="fa fa-circle" />
                             </div>
                             <div class="hs_pr_icon_cont_wrapper">
                               Learn to create emotional safety within yourself and with others.
@@ -735,7 +1161,7 @@
                           </li>
                           <li>
                             <div class="hs_pr_icon_wrapper">
-                              <i class="fa fa-circle"></i>
+                              <i class="fa fa-circle" />
                             </div>
                             <div class="hs_pr_icon_cont_wrapper">
                               Build healthier, deeper family or home-based relationships.
@@ -743,7 +1169,7 @@
                           </li>
                           <li>
                             <div class="hs_pr_icon_wrapper">
-                              <i class="fa fa-circle"></i>
+                              <i class="fa fa-circle" />
                             </div>
                             <div class="hs_pr_icon_cont_wrapper">
                               Finally feel at peace with your past, no longer held back by childhood pain.
@@ -759,7 +1185,10 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                       <div class="hs_kd_six_sec_btn">
                         <ul>  
-                          <li><router-link class="hs_btn_hover" to="/reflectiveQuestion">Refecletive Question</router-link></li>
+                          <li><router-link
+                            class="hs_btn_hover"
+                            to="/reflectiveQuestion"
+                          >Refecletive Question</router-link></li>
                         </ul>
                       </div>
                     </div>
