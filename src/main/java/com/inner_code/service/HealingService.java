@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.inner_code.dto.HealingRequest;
+import com.inner_code.dto.PersonalOverViewDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -28,8 +29,10 @@ public class HealingService {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
-    public Map<String, Object> getHealingData(HealingRequest request) throws JsonProcessingException {
+    public PersonalOverViewDto getHealingData(HealingRequest request) throws JsonProcessingException {
         String prompt = buildPrompt(request);
+
+        System.out.println("prompt--> "+prompt);
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -44,12 +47,11 @@ public class HealingService {
 
         ResponseEntity<Map> response = restTemplate.postForEntity(apiUrl, httpEntity, Map.class);
 
-        // Extract and parse response
         String fullText = extractTextFromResponse(response.getBody());
         String jsonPart = extractJsonString(fullText);
 
         ObjectMapper mapper = new ObjectMapper();
-        return mapper.readValue(jsonPart, new TypeReference<>() {});
+        return mapper.readValue(jsonPart, PersonalOverViewDto.class);
     }
 
     private String buildPrompt(HealingRequest r) {
@@ -60,13 +62,14 @@ public class HealingService {
             - Birth Date: %s
             - Birth Time: %s
             - Birth Place: %s
-
-                You have to focus on the User's Chiron Placement: Chiron in zodiac_sign in the house.
+                According to the user BirthDate, BirthTime, and BirthPlace,
+                
+                step1You have to calculate the User's Chiron Placement: Chiron in zodiac_sign in the house.
                 
                 🗣️ Language Preference: Please generate the entire response in **%s**.
                 
                 Translate gently and contextually — not word-for-word — while keeping the meaning, warmth, and emotional depth.
-                Ensure the tone remains poetic, empathetic, trauma-sensitive, and culturally natural in {language}.
+                Ensure the tone remains poetic, empathetic, trauma-sensitive, and culturally natural in %s.
                 
                 Generate a complete healing journey based on this placement.
                 Make sure your response has the following structure:
@@ -74,16 +77,16 @@ public class HealingService {
                     "mainTitle": "Chiron in Scorpio in the 4th House",
                     "description": "A reflective overview of this placement’s emotional and spiritual themes.",
                 
-                    "CoreWoundsAndEmotionalThemes": ["keywords that capture deep emotional wounds, e.g., abandonment, betrayal, etc."],
-                    "PatternsAndStruggles": ["keywords that reflect common behavioral or emotional struggles."],
-                    "HealingAndTransformation": ["keywords that represent the healing path and emotional growth."],
-                    "SpiritualWisdomAndGifts": ["keywords showing the spiritual gifts and insights gained through healing."],
+                    "coreWoundsAndEmotionalThemes": ["keywords that capture deep emotional wounds, e.g., abandonment, betrayal, etc."],
+                    "patternsAndStruggles": ["keywords that reflect common behavioral or emotional struggles."],
+                    "healingAndTransformation": ["keywords that represent the healing path and emotional growth."],
+                    "spiritualWisdomAndGifts": ["keywords showing the spiritual gifts and insights gained through healing."],
                 
                     "woundPoints": ["Write 3–4 emotional facts or experiences that often come with this Chiron placement."],
                 
-                    "PatternsConnectedToThisWound": ["Describe 3–4 behavioral or relational patterns that are shaped by this wound."],
+                    "patternsConnectedToThisWound": ["Describe 3–4 behavioral or relational patterns that are shaped by this wound."],
                 
-                    "Healing Benefits": ["List 3–4 healing outcomes — personal growth, peace, transformation — that come from facing and healing this wound."]
+                    "healingBenefits": ["List 3–4 healing outcomes — personal growth, peace, transformation — that come from facing and healing this wound."]
                 }}
                 
                 💡 Tone & Style:
@@ -95,7 +98,7 @@ public class HealingService {
                 Notes for writing:
                 - For `description`: Provide a brief but emotionally deep overview of the Chiron wound and healing potential.
                 - For keyword sections: Only list **relevant themes as short phrases**.
-                - For bullet-point sections: Create **natural-sounding, insightful sentences** that reflect lived emotional experience.""", r.getBirthDate(), r.getTime(), r.getBirthPlace(), r.getLanguage());
+                - For bullet-point sections: Create **natural-sounding, insightful sentences** that reflect lived emotional experience.""", r.getBirthDate(), r.getTime(), r.getBirthPlace(), r.getLanguage(), r.getLanguage());
     }
 
     private String extractTextFromResponse(Map responseBody) {
