@@ -7,30 +7,45 @@ import com.inner_code.model.User;
 import com.inner_code.service.HealingService;
 import com.inner_code.service.UserService;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
 @CrossOrigin
 @AllArgsConstructor
 public class UserController {
+    @Autowired
     private final UserService userService;
+
     private final HealingService healingService;
     @GetMapping("/search")
     public User getUsers() {
-        return userService.getUser();
+        return null;
+    }
+
+    @PostMapping("/register")
+    public String registerUser(@RequestBody User user) {
+        return userService.registerUser(user);
+    }
+
+    @GetMapping
+    public List<User> getAllUsers() {
+        return userService.getAllUsers();
     }
 
     @PostMapping("/personal-inside-data-overview")
     public ResponseEntity<PersonalOverViewDto> getPersonalInsideDataOverview(@RequestBody HealingRequest request) throws JsonProcessingException {
         System.out.println("request--> "+request);
-        try {
-            Thread.sleep(50_00); // Wait for 10 seconds
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt(); // restore interrupt flag
-            throw new RuntimeException("Interrupted while waiting", e);
-        }
+//        try {
+//            Thread.sleep(50_00); // Wait for 10 seconds
+//        } catch (InterruptedException e) {
+//            Thread.currentThread().interrupt(); // restore interrupt flag
+//            throw new RuntimeException("Interrupted while waiting", e);
+//        }
 
         PersonalOverViewDto response = healingService.getHealingData(request);
         return ResponseEntity.ok(response);
