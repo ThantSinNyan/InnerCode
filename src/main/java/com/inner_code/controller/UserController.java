@@ -3,6 +3,7 @@ package com.inner_code.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.inner_code.dto.HealingRequest;
 import com.inner_code.dto.PersonalOverViewDto;
+import com.inner_code.service.HealingService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,13 +13,22 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/users")
 @CrossOrigin
-@AllArgsConstructor
 public class UserController {
+    private final HealingService healingService;
+
+    public UserController(HealingService healingService) {
+        this.healingService = healingService;
+    }
 
     @PostMapping("/personal-inside-data-overview")
     public ResponseEntity<PersonalOverViewDto> getPersonalInsideDataOverview(@RequestBody HealingRequest request) throws JsonProcessingException {
-        System.out.println("request--> "+request);
-        return ResponseEntity.ok(getPersonalOverView());
+        PersonalOverViewDto response = healingService.getHealingOverview(
+                request.getBirthDate(),
+                request.getBirthTime(),
+                request.getBirthPlace(),
+                request.getLanguage()
+        );
+        return ResponseEntity.ok(response);
     }
     private PersonalOverViewDto getPersonalOverView(){
         PersonalOverViewDto response = new PersonalOverViewDto();
