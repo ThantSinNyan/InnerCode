@@ -30,6 +30,9 @@ public class PersonalInfo {
     @Column(columnDefinition = "TEXT")
     private String description;
 
+    @OneToOne(mappedBy = "personalInfo", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private HealingPlan healingPlan;
+
     @OneToMany(mappedBy = "personalInfo", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<CoreWound> coreWoundsAndEmotionalThemes = new ArrayList<>();
 
@@ -52,4 +55,6 @@ public class PersonalInfo {
     private List<HealingBenefit> healingBenefits = new ArrayList<>();
 
     private LocalDateTime createdAt = LocalDateTime.now();
+
+
 }
