@@ -6,6 +6,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class HealingRequest {
+    private String userId;
     private String birthDate;
     private String birthTime;
     private String birthPlace;
