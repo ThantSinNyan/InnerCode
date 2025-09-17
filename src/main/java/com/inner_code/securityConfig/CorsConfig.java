@@ -13,7 +13,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins("http://localhost:5173")
+                        .allowedOrigins("https://inner-code-frontend-8b7fbfdc9e53.herokuapp.com/")
                         .allowedMethods("*")
                         .allowedHeaders("*")
                         .exposedHeaders("Authorization")
