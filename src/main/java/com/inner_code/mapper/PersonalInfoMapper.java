@@ -7,7 +7,7 @@ import com.inner_code.model.*;
 public class PersonalInfoMapper {
     public static PersonalOverViewDto mapToDto(PersonalInfo info) {
         PersonalOverViewDto dto = new PersonalOverViewDto();
-
+        dto.setId(info.getId()+"");
         dto.setSign(info.getSign());
         dto.setHouse(info.getHouse());
         dto.setMainTitle(info.getMainTitle());

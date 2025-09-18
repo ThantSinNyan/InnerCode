@@ -1,5 +1,7 @@
 package com.inner_code.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,8 +28,9 @@ public class HealingPlan {
 
     private String status;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "personal_info_id", nullable = false, unique = true)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "personal_info_id", nullable = false)
+    @JsonIgnore
     private PersonalInfo personalInfo;
 
     @OneToMany(mappedBy = "healingPlan", cascade = CascadeType.ALL, orphanRemoval = true)

@@ -9,6 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/users")
 @CrossOrigin
@@ -19,12 +21,25 @@ public class UserController {
         this.healingService = healingService;
     }
 
-    @PostMapping("/personal-inside-data-overview")
-    public ResponseEntity<PersonalOverViewDto> getPersonalInsideDataOverview(@RequestBody HealingRequest request,
+    @PostMapping("/generate-personal-inside-data-overview")
+    public ResponseEntity<PersonalOverViewDto> generatePersonalInsideDataOverview(@RequestBody HealingRequest request,
                                                                              @AuthenticationPrincipal Jwt principal) throws JsonProcessingException {
-        PersonalOverViewDto response = healingService.getHealingOverview(
+        PersonalOverViewDto response = healingService.generateAndSaveHealingOverview(
                 request
         );
         return ResponseEntity.ok(response);
     }
+    @PostMapping("/getHealingJourneyByUserId")
+    public ResponseEntity<List<PersonalOverViewDto>> getPersonalInsideDataOverviewByUserId(@RequestBody HealingRequest request,
+                                                                                   @AuthenticationPrincipal Jwt principal) throws JsonProcessingException {
+        List<PersonalOverViewDto> response = healingService.getPersonalInsideDataOverviewByUserId(request);
+        return ResponseEntity.ok(response);
+    }
+    @PostMapping("/get-personal-inside-data-overview")
+    public ResponseEntity<PersonalOverViewDto> getPersonalInsideDataOverviewById(@RequestBody HealingRequest request,
+                                                                             @AuthenticationPrincipal Jwt principal) throws JsonProcessingException {
+        PersonalOverViewDto response = healingService.getPersonalInsideDataOverviewById(request);
+        return ResponseEntity.ok(response);
+    }
+
 }

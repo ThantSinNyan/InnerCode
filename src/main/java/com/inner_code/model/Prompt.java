@@ -1,5 +1,6 @@
 package com.inner_code.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,5 +25,6 @@ public class Prompt {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "healing_plan_id", nullable = false)
+    @JsonIgnore
     private HealingPlan healingPlan;
 }

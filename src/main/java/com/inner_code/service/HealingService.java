@@ -27,15 +27,30 @@ public class HealingService {
         this.personalInfoRepository = personalInfoRepository;
         this.healingFeignClient = healingFeignClient;
     }
-
-    public PersonalOverViewDto getHealingOverview(HealingRequest healingRequest) {
+    public List<PersonalOverViewDto> getPersonalInsideDataOverviewByUserId(HealingRequest healingRequest) {
         Long userId = Long.valueOf(healingRequest.getUserId());
-
         List<PersonalInfo> infos = personalInfoRepository.findByUserId(userId);
-        if (infos != null && !infos.isEmpty()) {
-            return mapToDto(infos.get(0));
+        System.out.println("infos.size()->"+infos.size());
+        List<PersonalOverViewDto> personalOverViewDtoList=new ArrayList<>();
+        for(PersonalInfo info:infos){
+            PersonalOverViewDto personalOverViewDto=mapToDto(info);
+            personalOverViewDto.setHealingPlans(info.getHealingPlans());
+            personalOverViewDtoList.add(personalOverViewDto);
         }
+        System.out.println("personalOverViewDtoList.size()->"+personalOverViewDtoList.size());
+        return personalOverViewDtoList;
+    }
 
+    public PersonalOverViewDto getPersonalInsideDataOverviewById(HealingRequest healingRequest) {
+        Long id = Long.valueOf(healingRequest.getId());
+        PersonalInfo info = personalInfoRepository.findById(id).orElse(null);
+        PersonalOverViewDto personalOverViewDto=mapToDto(info);
+        personalOverViewDto.setHealingPlans(info.getHealingPlans());
+        return personalOverViewDto;
+    }
+
+    public PersonalOverViewDto generateAndSaveHealingOverview(HealingRequest healingRequest) {
+        Long userId = Long.valueOf(healingRequest.getUserId());
         return generateAndSaveNewOverview(healingRequest, userId);
     }
 
@@ -55,7 +70,6 @@ public class HealingService {
         planRequest.setSign(overviewDto.getSign());
         planRequest.setHouse(overviewDto.getHouse());
         planRequest.setQuestion(healingPlanGuideQuestion);
-
         return healingFeignClient.generatePlan(planRequest);
     }
 
@@ -174,28 +188,34 @@ public class HealingService {
     }
     private void mapHealingPlan(HealingPlanResponse planResponse, PersonalInfo info) {
         if (planResponse != null && planResponse.getPlan() != null && !planResponse.getPlan().isEmpty()) {
-            HealingPlanResponse.PlanItem planItem = planResponse.getPlan().get(0);
 
-            HealingPlan healingPlan = new HealingPlan();
-            healingPlan.setOverview(planItem.getOverview());
-            healingPlan.setActivity(planItem.getActivity());
-            healingPlan.setMeditation(planItem.getMeditation());
-            healingPlan.setStatus(ActivityStatus.NOT_STARTED.toString());
-            healingPlan.setPersonalInfo(info);
+            List<HealingPlan> plans = new ArrayList<>();
 
-            if (planItem.getPrompts() != null) {
-                List<Prompt> prompts = new ArrayList<>();
-                for (String promptText : planItem.getPrompts()) {
-                    Prompt prompt = new Prompt();
-                    prompt.setQuestion(promptText);
-                    prompt.setStatus(ActivityStatus.NOT_STARTED.toString());
-                    prompt.setHealingPlan(healingPlan);
-                    prompts.add(prompt);
+            for (HealingPlanResponse.PlanItem planItem : planResponse.getPlan()) {
+                HealingPlan healingPlan = new HealingPlan();
+                healingPlan.setOverview(planItem.getOverview());
+                healingPlan.setActivity(planItem.getActivity());
+                healingPlan.setMeditation(planItem.getMeditation());
+                healingPlan.setStatus(ActivityStatus.NOT_STARTED.toString());
+                healingPlan.setPersonalInfo(info);
+
+                // map prompts
+                if (planItem.getPrompts() != null) {
+                    List<Prompt> prompts = new ArrayList<>();
+                    for (String promptText : planItem.getPrompts()) {
+                        Prompt prompt = new Prompt();
+                        prompt.setQuestion(promptText);
+                        prompt.setStatus(ActivityStatus.NOT_STARTED.toString());
+                        prompt.setHealingPlan(healingPlan);
+                        prompts.add(prompt);
+                    }
+                    healingPlan.setPrompts(prompts);
                 }
-                healingPlan.setPrompts(prompts);
-            }
 
-            info.setHealingPlan(healingPlan);
+                plans.add(healingPlan);
+            }
+            info.setHealingPlans(plans);
         }
     }
+
 }

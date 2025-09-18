@@ -1,8 +1,10 @@
 package com.inner_code.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -12,6 +14,7 @@ import java.util.List;
 @Table(name = "personal_info")
 @Getter
 @Setter
+@ToString
 public class PersonalInfo {
 
     @Id
@@ -30,8 +33,8 @@ public class PersonalInfo {
     @Column(columnDefinition = "TEXT")
     private String description;
 
-    @OneToOne(mappedBy = "personalInfo", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    private HealingPlan healingPlan;
+    @OneToMany(mappedBy = "personalInfo", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private List<HealingPlan> healingPlans = new ArrayList<>();
 
     @OneToMany(mappedBy = "personalInfo", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<CoreWound> coreWoundsAndEmotionalThemes = new ArrayList<>();
