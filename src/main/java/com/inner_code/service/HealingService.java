@@ -57,9 +57,10 @@ public class HealingService {
         overviewDto.setMainTitle(buildMainTitle(overviewDto));
         HealingPlanResponse planResponse = generateHealingPlan(overviewDto);
         PersonalInfo info=savePersonalOverview(overviewDto, userId, planResponse);
-        overviewDto.setId(info.getId()+"");
-        info.setHealingPlans(info.getHealingPlans());
-        return overviewDto;
+        PersonalOverViewDto personalOverViewDto=mapToDto(info);
+        personalOverViewDto.setId(info.getId()+"");
+        personalOverViewDto.setHealingPlans(info.getHealingPlans());
+        return personalOverViewDto;
     }
 
     private String buildMainTitle(PersonalOverViewDto overviewDto) {
