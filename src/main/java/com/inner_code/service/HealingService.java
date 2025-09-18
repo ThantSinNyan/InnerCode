@@ -30,14 +30,12 @@ public class HealingService {
     public List<PersonalOverViewDto> getPersonalInsideDataOverviewByUserId(HealingRequest healingRequest) {
         Long userId = Long.valueOf(healingRequest.getUserId());
         List<PersonalInfo> infos = personalInfoRepository.findByUserId(userId);
-        System.out.println("infos.size()->"+infos.size());
         List<PersonalOverViewDto> personalOverViewDtoList=new ArrayList<>();
         for(PersonalInfo info:infos){
             PersonalOverViewDto personalOverViewDto=mapToDto(info);
             personalOverViewDto.setHealingPlans(info.getHealingPlans());
             personalOverViewDtoList.add(personalOverViewDto);
         }
-        System.out.println("personalOverViewDtoList.size()->"+personalOverViewDtoList.size());
         return personalOverViewDtoList;
     }
 
@@ -59,6 +57,7 @@ public class HealingService {
         overviewDto.setMainTitle(buildMainTitle(overviewDto));
         HealingPlanResponse planResponse = generateHealingPlan(overviewDto);
         PersonalInfo info=savePersonalOverview(overviewDto, userId, planResponse);
+        overviewDto.setId(info.getId()+"");
         info.setHealingPlans(info.getHealingPlans());
         return overviewDto;
     }
