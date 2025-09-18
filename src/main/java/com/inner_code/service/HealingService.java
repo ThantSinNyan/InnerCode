@@ -58,7 +58,8 @@ public class HealingService {
         PersonalOverViewDto overviewDto = healingFeignClient.generateOverview(healingRequest);
         overviewDto.setMainTitle(buildMainTitle(overviewDto));
         HealingPlanResponse planResponse = generateHealingPlan(overviewDto);
-        savePersonalOverview(overviewDto, userId, planResponse);
+        PersonalInfo info=savePersonalOverview(overviewDto, userId, planResponse);
+        info.setHealingPlans(info.getHealingPlans());
         return overviewDto;
     }
 
@@ -73,7 +74,7 @@ public class HealingService {
         return healingFeignClient.generatePlan(planRequest);
     }
 
-    private void savePersonalOverview(PersonalOverViewDto dto, Long userId, HealingPlanResponse planResponse) {
+    private PersonalInfo savePersonalOverview(PersonalOverViewDto dto, Long userId, HealingPlanResponse planResponse) {
         PersonalInfo info = new PersonalInfo();
         info.setUserId(userId);
         info.setSign(dto.getSign());
@@ -93,7 +94,7 @@ public class HealingService {
         // Map Healing Plan
         mapHealingPlan(planResponse, info);
 
-        personalInfoRepository.save(info);
+        return personalInfoRepository.save(info);
     }
 
     private void mapCoreWounds(PersonalOverViewDto dto, PersonalInfo info) {
