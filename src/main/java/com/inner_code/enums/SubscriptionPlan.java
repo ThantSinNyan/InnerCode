@@ -1,28 +1,28 @@
 package com.inner_code.enums;
 
 public enum SubscriptionPlan {
-    NONE(-1),
-    FREE(1),
-    MONTHLY(2),
-    QUARTERLY(3),
-    YEARLY(4);
+    NONE("-1"),
+    FREE("1"),
+    MONTHLY("2"),
+    QUARTERLY("3"),
+    YEARLY("4");
 
-    private final int value;
+    private final String value;
 
-    SubscriptionPlan(int value) {
+    SubscriptionPlan(String value) {
         this.value = value;
     }
 
-    public int getValue() {
+    public String getValue() {
         return value;
     }
 
-    public static SubscriptionPlan fromValue(int value) {
+    public static SubscriptionPlan fromValue(String value) {
         for (SubscriptionPlan plan : values()) {
-            if (plan.value == value) {
+            if (plan.value.equals(value)) {
                 return plan;
             }
         }
-       return SubscriptionPlan.NONE;
+        throw new IllegalArgumentException("Invalid SubscriptionPlan value: " + value);
     }
 }

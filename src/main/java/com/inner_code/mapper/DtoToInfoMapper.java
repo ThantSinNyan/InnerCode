@@ -138,11 +138,11 @@ public class DtoToInfoMapper {
         }
     }
     private static void mapReflcetiveQuestions(PersonalOverViewDto dto, PersonalInfo info) {
-        if (dto.getHealingBenefits() != null) {
+        if (dto.getReflectiveQuestions() != null) {
             List<ReflectiveQuestion> list = new ArrayList<>();
-            for (ReflectiveQuestionDTO val : dto.getReflectiveQuestions()) {
+            for (String question : dto.getReflectiveQuestions()) {
                 ReflectiveQuestion entity = new ReflectiveQuestion();
-                entity.setQuestion(val.getQuestion());
+                entity.setQuestion(question);
                 entity.setAnswer(NOT_STARTED.getCode());
                 entity.setPersonalInfo(info);
                 list.add(entity);

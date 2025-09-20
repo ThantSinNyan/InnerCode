@@ -4,8 +4,6 @@ import com.inner_code.dto.HealingPlanRequest;
 import com.inner_code.dto.HealingPlanResponse;
 import com.inner_code.dto.HealingRequest;
 import com.inner_code.dto.PersonalOverViewDto;
-import com.inner_code.enums.ActivityStatus;
-import com.inner_code.enums.SubscriptionPlan;
 import com.inner_code.feignClient.HealingFeignClient;
 import com.inner_code.model.*;
 import com.inner_code.repository.PersonalInfoRepository;
@@ -80,7 +78,5 @@ public class HealingOverviewService {
     private String buildMainTitle(PersonalOverViewDto overviewDto) {
         return "Chiron in " + overviewDto.getSign() + " in the " + overviewDto.getHouse() + " house";
     }
-
-
 
 }

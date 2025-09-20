@@ -1,5 +1,6 @@
 package com.inner_code.model;
 
+import com.inner_code.enums.SubscriptionPlan;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -33,7 +34,7 @@ public class PersonalInfo {
     private String description;
 
     @Column(columnDefinition = "TEXT")
-    private Integer subscription;
+    private String subscription= SubscriptionPlan.NONE.getValue();
 
     @OneToMany(mappedBy = "personalInfo", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<HealingPlan> healingPlans = new ArrayList<>();

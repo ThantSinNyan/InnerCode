@@ -2,6 +2,7 @@ package com.inner_code.mapper;
 
 import com.inner_code.dto.PersonalOverViewDto;
 import com.inner_code.dto.ReflectiveQuestionDTO;
+import com.inner_code.enums.SubscriptionPlan;
 import com.inner_code.model.PersonalInfo;
 import com.inner_code.model.*;
 
@@ -13,6 +14,7 @@ public class PersonalInfoMapper {
         dto.setHouse(info.getHouse());
         dto.setMainTitle(info.getMainTitle());
         dto.setDescription(info.getDescription());
+        dto.setSubscription(SubscriptionPlan.fromValue(info.getSubscription()).name());
 
         dto.setCoreWoundsAndEmotionalThemes(
                 info.getCoreWoundsAndEmotionalThemes().stream()
@@ -49,7 +51,7 @@ public class PersonalInfoMapper {
                         .map(HealingBenefit::getValue)
                         .toList()
         );
-        dto.setReflectiveQuestions(
+        dto.setReflectiveQuestionDTOs(
                 info.getReflectiveQuestions().stream()
                         .map(rq -> new ReflectiveQuestionDTO(
                                 rq.getId(),

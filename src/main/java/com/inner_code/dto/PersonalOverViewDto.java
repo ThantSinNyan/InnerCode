@@ -12,6 +12,7 @@ public class PersonalOverViewDto {
     private String house;
     private String mainTitle;
     private String description;
+    private String subscription;
     private List<String> coreWoundsAndEmotionalThemes;
     private List<String> patternsAndStruggles;
     private List<String> healingAndTransformation;
@@ -19,6 +20,7 @@ public class PersonalOverViewDto {
     private List<String> woundPoints;
     private List<String> patternsConnectedToThisWound;
     private List<String> healingBenefits;
-    private List<ReflectiveQuestionDTO> reflectiveQuestions;
+    private List<String> reflectiveQuestions;
+    private List<ReflectiveQuestionDTO> reflectiveQuestionDTOs;
     private List<HealingPlan> healingPlans;
 }
