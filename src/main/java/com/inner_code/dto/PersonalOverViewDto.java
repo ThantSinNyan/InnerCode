@@ -1,6 +1,7 @@
 package com.inner_code.dto;
 
 import com.inner_code.model.HealingPlan;
+import com.inner_code.model.ReflectiveQuestion;
 import lombok.Data;
 
 import java.util.List;
@@ -18,5 +19,6 @@ public class PersonalOverViewDto {
     private List<String> woundPoints;
     private List<String> patternsConnectedToThisWound;
     private List<String> healingBenefits;
+    private List<ReflectiveQuestionDTO> reflectiveQuestions;
     private List<HealingPlan> healingPlans;
 }

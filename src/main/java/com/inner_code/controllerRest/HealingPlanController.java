@@ -3,7 +3,8 @@ package com.inner_code.controllerRest;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.inner_code.dto.HealingRequest;
 import com.inner_code.dto.PersonalOverViewDto;
-import com.inner_code.service.HealingService;
+import com.inner_code.service.HealingOverviewService;
+import lombok.AllArgsConstructor;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -14,12 +15,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/users")
 @CrossOrigin
-public class UserController {
-    private final HealingService healingService;
-
-    public UserController(HealingService healingService) {
-        this.healingService = healingService;
-    }
+@AllArgsConstructor
+public class HealingPlanController {
+    private final HealingOverviewService healingService;
 
     @PostMapping("/generate-personal-inside-data-overview")
     public ResponseEntity<PersonalOverViewDto> generatePersonalInsideDataOverview(@RequestBody HealingRequest request,

@@ -1,6 +1,5 @@
 package com.inner_code.model;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -33,6 +32,9 @@ public class PersonalInfo {
     @Column(columnDefinition = "TEXT")
     private String description;
 
+    @Column(columnDefinition = "TEXT")
+    private Integer subscription;
+
     @OneToMany(mappedBy = "personalInfo", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<HealingPlan> healingPlans = new ArrayList<>();
 
@@ -57,7 +59,8 @@ public class PersonalInfo {
     @OneToMany(mappedBy = "personalInfo", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<HealingBenefit> healingBenefits = new ArrayList<>();
 
+    @OneToMany(mappedBy = "personalInfo", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ReflectiveQuestion> reflectiveQuestions = new ArrayList<>();
+
     private LocalDateTime createdAt = LocalDateTime.now();
-
-
 }

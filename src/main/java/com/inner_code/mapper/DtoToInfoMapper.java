@@ -1,88 +1,41 @@
-package com.inner_code.service;
+package com.inner_code.mapper;
 
-import com.inner_code.dto.HealingPlanRequest;
 import com.inner_code.dto.HealingPlanResponse;
-import com.inner_code.dto.HealingRequest;
 import com.inner_code.dto.PersonalOverViewDto;
+import com.inner_code.dto.ReflectiveQuestionDTO;
 import com.inner_code.enums.ActivityStatus;
-import com.inner_code.feignClient.HealingFeignClient;
-import com.inner_code.model.*;
-import com.inner_code.repository.PersonalInfoRepository;
-import org.springframework.stereotype.Service;
+import com.inner_code.enums.SubscriptionPlan;
+import com.inner_code.model.CoreWound;
+import com.inner_code.model.HealingAndTransformation;
+import com.inner_code.model.HealingBenefit;
+import com.inner_code.model.HealingPlan;
+import com.inner_code.model.PatternAndStruggle;
+import com.inner_code.model.PatternConnectedToWound;
+import com.inner_code.model.PersonalInfo;
+import com.inner_code.model.Prompt;
+import com.inner_code.model.ReflectiveQuestion;
+import com.inner_code.model.SpiritualWisdomAndGift;
+import com.inner_code.model.WoundPoint;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.inner_code.mapper.PersonalInfoMapper.mapToDto;
-import static com.inner_code.util.Constants.healingPlanGuideQuestion;
+import static com.inner_code.enums.ActivityStatus.NOT_STARTED;
 
-@Service
-public class HealingService {
-
-    private final PersonalInfoRepository personalInfoRepository;
-    private final HealingFeignClient healingFeignClient;
-
-    public HealingService(PersonalInfoRepository personalInfoRepository,
-                          HealingFeignClient healingFeignClient) {
-        this.personalInfoRepository = personalInfoRepository;
-        this.healingFeignClient = healingFeignClient;
-    }
-    public List<PersonalOverViewDto> getPersonalInsideDataOverviewByUserId(HealingRequest healingRequest) {
-        Long userId = Long.valueOf(healingRequest.getUserId());
-        List<PersonalInfo> infos = personalInfoRepository.findByUserId(userId);
-        List<PersonalOverViewDto> personalOverViewDtoList=new ArrayList<>();
-        for(PersonalInfo info:infos){
-            PersonalOverViewDto personalOverViewDto=mapToDto(info);
-            personalOverViewDto.setHealingPlans(info.getHealingPlans());
-            personalOverViewDtoList.add(personalOverViewDto);
-        }
-        return personalOverViewDtoList;
-    }
-
-    public PersonalOverViewDto getPersonalInsideDataOverviewById(HealingRequest healingRequest) {
-        Long id = Long.valueOf(healingRequest.getId());
-        PersonalInfo info = personalInfoRepository.findById(id).orElse(null);
-        PersonalOverViewDto personalOverViewDto=mapToDto(info);
-        personalOverViewDto.setHealingPlans(info.getHealingPlans());
-        return personalOverViewDto;
-    }
-
-    public PersonalOverViewDto generateAndSaveHealingOverview(HealingRequest healingRequest) {
-        Long userId = Long.valueOf(healingRequest.getUserId());
-        return generateAndSaveNewOverview(healingRequest, userId);
-    }
-
-    private PersonalOverViewDto generateAndSaveNewOverview(HealingRequest healingRequest, Long userId) {
-        PersonalOverViewDto overviewDto = healingFeignClient.generateOverview(healingRequest);
-        overviewDto.setMainTitle(buildMainTitle(overviewDto));
-        HealingPlanResponse planResponse = generateHealingPlan(overviewDto);
-        PersonalInfo info=savePersonalOverview(overviewDto, userId, planResponse);
-        PersonalOverViewDto personalOverViewDto=mapToDto(info);
-        personalOverViewDto.setId(info.getId()+"");
-        personalOverViewDto.setHealingPlans(info.getHealingPlans());
-        return personalOverViewDto;
-    }
-
-    private String buildMainTitle(PersonalOverViewDto overviewDto) {
-        return "Chiron in " + overviewDto.getSign() + " in the " + overviewDto.getHouse() + " house";
-    }
-    private HealingPlanResponse generateHealingPlan(PersonalOverViewDto overviewDto) {
-        HealingPlanRequest planRequest = new HealingPlanRequest();
-        planRequest.setSign(overviewDto.getSign());
-        planRequest.setHouse(overviewDto.getHouse());
-        planRequest.setQuestion(healingPlanGuideQuestion);
-        return healingFeignClient.generatePlan(planRequest);
-    }
-
-    private PersonalInfo savePersonalOverview(PersonalOverViewDto dto, Long userId, HealingPlanResponse planResponse) {
-        PersonalInfo info = new PersonalInfo();
+public class DtoToInfoMapper {
+    public static void mapPersonalInfo(PersonalOverViewDto dto,
+                                       PersonalInfo info,
+                                       Long userId,
+                                       HealingPlanResponse planResponse) {
         info.setUserId(userId);
         info.setSign(dto.getSign());
         info.setHouse(dto.getHouse());
         info.setMainTitle(dto.getMainTitle());
         info.setDescription(dto.getDescription());
-
-        // Map sections
+        if (info.getReflectiveQuestions() != null &&
+                info.getReflectiveQuestions().stream().allMatch(q -> q.getAnswer() != null)) {
+            info.setSubscription(SubscriptionPlan.FREE.getValue());
+        }
         mapCoreWounds(dto, info);
         mapPatternsAndStruggles(dto, info);
         mapHealingAndTransformations(dto, info);
@@ -90,14 +43,11 @@ public class HealingService {
         mapWoundPoints(dto, info);
         mapPatternsConnectedToWound(dto, info);
         mapHealingBenefits(dto, info);
-
-        // Map Healing Plan
         mapHealingPlan(planResponse, info);
+        mapReflcetiveQuestions(dto, info);
 
-        return personalInfoRepository.save(info);
     }
-
-    private void mapCoreWounds(PersonalOverViewDto dto, PersonalInfo info) {
+    private static void mapCoreWounds(PersonalOverViewDto dto, PersonalInfo info) {
         if (dto.getCoreWoundsAndEmotionalThemes() != null) {
             List<CoreWound> list = new ArrayList<>();
             for (String val : dto.getCoreWoundsAndEmotionalThemes()) {
@@ -110,7 +60,7 @@ public class HealingService {
         }
     }
 
-    private void mapPatternsAndStruggles(PersonalOverViewDto dto, PersonalInfo info) {
+    private static void mapPatternsAndStruggles(PersonalOverViewDto dto, PersonalInfo info) {
         if (dto.getPatternsAndStruggles() != null) {
             List<PatternAndStruggle> list = new ArrayList<>();
             for (String val : dto.getPatternsAndStruggles()) {
@@ -123,7 +73,7 @@ public class HealingService {
         }
     }
 
-    private void mapHealingAndTransformations(PersonalOverViewDto dto, PersonalInfo info) {
+    private static void mapHealingAndTransformations(PersonalOverViewDto dto, PersonalInfo info) {
         if (dto.getHealingAndTransformation() != null) {
             List<HealingAndTransformation> list = new ArrayList<>();
             for (String val : dto.getHealingAndTransformation()) {
@@ -136,7 +86,7 @@ public class HealingService {
         }
     }
 
-    private void mapSpiritualWisdom(PersonalOverViewDto dto, PersonalInfo info) {
+    private static void mapSpiritualWisdom(PersonalOverViewDto dto, PersonalInfo info) {
         if (dto.getSpiritualWisdomAndGifts() != null) {
             List<SpiritualWisdomAndGift> list = new ArrayList<>();
             for (String val : dto.getSpiritualWisdomAndGifts()) {
@@ -149,7 +99,7 @@ public class HealingService {
         }
     }
 
-    private void mapWoundPoints(PersonalOverViewDto dto, PersonalInfo info) {
+    private static void mapWoundPoints(PersonalOverViewDto dto, PersonalInfo info) {
         if (dto.getWoundPoints() != null) {
             List<WoundPoint> list = new ArrayList<>();
             for (String val : dto.getWoundPoints()) {
@@ -162,7 +112,7 @@ public class HealingService {
         }
     }
 
-    private void mapPatternsConnectedToWound(PersonalOverViewDto dto, PersonalInfo info) {
+    private static void mapPatternsConnectedToWound(PersonalOverViewDto dto, PersonalInfo info) {
         if (dto.getPatternsConnectedToThisWound() != null) {
             List<PatternConnectedToWound> list = new ArrayList<>();
             for (String val : dto.getPatternsConnectedToThisWound()) {
@@ -175,7 +125,7 @@ public class HealingService {
         }
     }
 
-    private void mapHealingBenefits(PersonalOverViewDto dto, PersonalInfo info) {
+    private static void mapHealingBenefits(PersonalOverViewDto dto, PersonalInfo info) {
         if (dto.getHealingBenefits() != null) {
             List<HealingBenefit> list = new ArrayList<>();
             for (String val : dto.getHealingBenefits()) {
@@ -187,7 +137,20 @@ public class HealingService {
             info.setHealingBenefits(list);
         }
     }
-    private void mapHealingPlan(HealingPlanResponse planResponse, PersonalInfo info) {
+    private static void mapReflcetiveQuestions(PersonalOverViewDto dto, PersonalInfo info) {
+        if (dto.getHealingBenefits() != null) {
+            List<ReflectiveQuestion> list = new ArrayList<>();
+            for (ReflectiveQuestionDTO val : dto.getReflectiveQuestions()) {
+                ReflectiveQuestion entity = new ReflectiveQuestion();
+                entity.setQuestion(val.getQuestion());
+                entity.setAnswer(NOT_STARTED.getCode());
+                entity.setPersonalInfo(info);
+                list.add(entity);
+            }
+            info.setReflectiveQuestions(list);
+        }
+    }
+    private static void mapHealingPlan(HealingPlanResponse planResponse, PersonalInfo info) {
         if (planResponse != null && planResponse.getPlan() != null && !planResponse.getPlan().isEmpty()) {
 
             List<HealingPlan> plans = new ArrayList<>();
@@ -197,16 +160,15 @@ public class HealingService {
                 healingPlan.setOverview(planItem.getOverview());
                 healingPlan.setActivity(planItem.getActivity());
                 healingPlan.setMeditation(planItem.getMeditation());
-                healingPlan.setStatus(ActivityStatus.NOT_STARTED.toString());
+                healingPlan.setStatus(NOT_STARTED.toString());
                 healingPlan.setPersonalInfo(info);
 
-                // map prompts
                 if (planItem.getPrompts() != null) {
                     List<Prompt> prompts = new ArrayList<>();
                     for (String promptText : planItem.getPrompts()) {
                         Prompt prompt = new Prompt();
                         prompt.setQuestion(promptText);
-                        prompt.setStatus(ActivityStatus.NOT_STARTED.toString());
+                        prompt.setStatus(NOT_STARTED.toString());
                         prompt.setHealingPlan(healingPlan);
                         prompts.add(prompt);
                     }
@@ -218,5 +180,4 @@ public class HealingService {
             info.setHealingPlans(plans);
         }
     }
-
 }

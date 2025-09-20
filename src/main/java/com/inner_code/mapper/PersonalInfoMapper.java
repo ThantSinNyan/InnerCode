@@ -1,6 +1,7 @@
 package com.inner_code.mapper;
 
 import com.inner_code.dto.PersonalOverViewDto;
+import com.inner_code.dto.ReflectiveQuestionDTO;
 import com.inner_code.model.PersonalInfo;
 import com.inner_code.model.*;
 
@@ -48,7 +49,15 @@ public class PersonalInfoMapper {
                         .map(HealingBenefit::getValue)
                         .toList()
         );
-
+        dto.setReflectiveQuestions(
+                info.getReflectiveQuestions().stream()
+                        .map(rq -> new ReflectiveQuestionDTO(
+                                rq.getId(),
+                                rq.getQuestion(),
+                                rq.getAnswer()
+                        ))
+                        .toList()
+        );
         return dto;
     }
 
