@@ -9,6 +9,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Entity @Getter @Setter @NoArgsConstructor @AllArgsConstructor
 @Table(name = "users", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User {
@@ -26,4 +28,12 @@ public class User {
 
     @Column(nullable = false)
     private String role = "ROLE_USER";
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdAt;
+
+    @PrePersist
+    protected void onCreate() {
+        this.createdAt = new Date();
+    }
 }

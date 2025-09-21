@@ -12,5 +12,6 @@ public class HealingPlanResponse {
         private String activity;
         private List<String> prompts;
         private String meditation;
+        private String affirmation;
     }
 }

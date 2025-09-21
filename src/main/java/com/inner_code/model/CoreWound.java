@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Entity
 @Table(name = "core_wounds_and_emotional_themes")
 @Getter
@@ -20,4 +22,12 @@ public class CoreWound {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "personal_info_id", nullable = false)
     private PersonalInfo personalInfo;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdAt;
+
+    @PrePersist
+    protected void onCreate() {
+        this.createdAt = new Date();
+    }
 }

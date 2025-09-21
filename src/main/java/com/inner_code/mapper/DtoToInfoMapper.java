@@ -32,10 +32,6 @@ public class DtoToInfoMapper {
         info.setHouse(dto.getHouse());
         info.setMainTitle(dto.getMainTitle());
         info.setDescription(dto.getDescription());
-        if (info.getReflectiveQuestions() != null &&
-                info.getReflectiveQuestions().stream().allMatch(q -> q.getAnswer() != null)) {
-            info.setSubscription(SubscriptionPlan.FREE.getValue());
-        }
         mapCoreWounds(dto, info);
         mapPatternsAndStruggles(dto, info);
         mapHealingAndTransformations(dto, info);
@@ -161,6 +157,8 @@ public class DtoToInfoMapper {
                 healingPlan.setActivity(planItem.getActivity());
                 healingPlan.setMeditation(planItem.getMeditation());
                 healingPlan.setStatus(NOT_STARTED.toString());
+                System.out.println("planItem.getAffirmation()->"+planItem.getAffirmation());
+                healingPlan.setAffirmation(planItem.getAffirmation());
                 healingPlan.setPersonalInfo(info);
 
                 if (planItem.getPrompts() != null) {

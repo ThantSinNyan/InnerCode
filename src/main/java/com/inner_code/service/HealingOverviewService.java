@@ -73,6 +73,7 @@ public class HealingOverviewService {
         planRequest.setSign(overviewDto.getSign());
         planRequest.setHouse(overviewDto.getHouse());
         planRequest.setQuestion(healingPlanGuideQuestion);
+        planRequest.setLanguage("english");
         return healingFeignClient.generatePlan(planRequest);
     }
     private String buildMainTitle(PersonalOverViewDto overviewDto) {

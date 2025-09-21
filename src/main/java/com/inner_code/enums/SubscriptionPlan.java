@@ -23,6 +23,6 @@ public enum SubscriptionPlan {
                 return plan;
             }
         }
-        throw new IllegalArgumentException("Invalid SubscriptionPlan value: " + value);
+        return SubscriptionPlan.NONE;
     }
 }

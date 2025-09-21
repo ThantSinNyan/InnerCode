@@ -1,37 +1,36 @@
 package com.inner_code.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
-@Table(name = "prompt")
+@Table(name = "meditation_media")
 @Getter
 @Setter
-public class Prompt {
+public class MeditationMedia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(columnDefinition = "TEXT")
-    private String question;
+    private String imgLink;
+    private String videoLink;
+    private String name;
 
     @Column(columnDefinition = "TEXT")
-    private String answer;
+    private String description;
 
-    private String status;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "healing_plan_id", nullable = false)
-    @JsonIgnore
-    private HealingPlan healingPlan;
+    private int status;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
+
+    @OneToMany(mappedBy = "meditationMedia", cascade = CascadeType.ALL, orphanRemoval = false,fetch = FetchType.LAZY)
+    private List<HealingPlan> healingPlans;
 
     @PrePersist
     protected void onCreate() {

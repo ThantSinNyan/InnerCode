@@ -11,4 +11,5 @@ public class HealingPlanRequest {
     private String sign;
     private String house;
     private String question;
+    private String language;
 }

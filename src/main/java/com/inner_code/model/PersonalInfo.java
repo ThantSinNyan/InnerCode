@@ -8,6 +8,7 @@ import lombok.ToString;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -63,5 +64,11 @@ public class PersonalInfo {
     @OneToMany(mappedBy = "personalInfo", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ReflectiveQuestion> reflectiveQuestions = new ArrayList<>();
 
-    private LocalDateTime createdAt = LocalDateTime.now();
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdAt;
+
+    @PrePersist
+    protected void onCreate() {
+        this.createdAt = new Date();
+    }
 }
