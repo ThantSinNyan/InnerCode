@@ -11,6 +11,6 @@ public class HealingRequest {
     private String birthDate;
     private String birthTime;
     private String birthPlace;
-    private String language;
+    private String language="English";
 }
 

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient(
         name = "healingClient",
-        url = "${healing.client.url}"
+        url = "${https://inner-code-data-rectriver-0ab4afb0a762.herokuapp.com}"
 )
 public interface HealingFeignClient {
 
