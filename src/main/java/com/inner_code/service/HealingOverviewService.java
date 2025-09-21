@@ -47,6 +47,7 @@ public class HealingOverviewService {
 
     public PersonalOverViewDto generateAndSaveHealingOverview(HealingRequest healingRequest) {
         Long userId = Long.valueOf(healingRequest.getUserId());
+        healingRequest.setLanguage("english");
         return generateAndSaveNewOverview(healingRequest, userId);
     }
 
